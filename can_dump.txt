@@ -1,6 +1,0 @@
-Timestamp: 1693495736.964912        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
-Timestamp: 1693495737.388662        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
-Timestamp: 1693495737.778712        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
-Timestamp: 1693495738.180802        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
-Timestamp: 1693495738.572629        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
-Timestamp: 1693495738.948715        ID: 0123    S Tx                DL:  3    12 33 21                    Channel: vcan0
