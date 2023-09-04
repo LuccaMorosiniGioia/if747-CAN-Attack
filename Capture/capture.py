@@ -24,4 +24,5 @@ def capture_can():
     f.close()
 
     print('Capture Done')
+    bus.shutdown()
     

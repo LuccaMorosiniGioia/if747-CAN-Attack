@@ -21,4 +21,5 @@ def dos_attack():
             count += 1
 
     print('DoS Attack Done')
+    bus.shutdown()
     
