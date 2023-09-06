@@ -1,8 +1,12 @@
 import can
 
-def dos_attack():
+def dos_attack(can_type):
     print('Initialing DoS Attack')
-    bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate=500000)
+	
+    if(can_type == '1'):
+    	bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate=500000)
+    else:
+    	bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate=500000)
     
     count = 0
     while count <= 10000:

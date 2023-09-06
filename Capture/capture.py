@@ -1,13 +1,20 @@
 import can
+import time
 
 
-def capture_can():
+def capture_can(can_type):
     print('Initialing Packet Capture')
-    bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate=500000)
+    
+    if(can_type == '1'):
+    	bus = can.interface.Bus(interface='socketcan', channel='vcan0', bitrate=500000)
+    else:
+    	bus = can.interface.Bus(interface='socketcan', channel='can0', bitrate=500000)
     
     count = 0
     msgs = []
-    while count <= 5:
+    init_time = time.time()
+    
+    while time.time() - init_time <= 600:
         try:
             msg = bus.recv()
         except can.CanOperationError:
@@ -17,7 +24,6 @@ def capture_can():
         else:
             msgs.append(str(msg)+'\n')
             print(msg)
-            count += 1
 
     f = open('can_dump.txt', 'a')
     f.writelines(msgs)
