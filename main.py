@@ -1,8 +1,9 @@
 from Capture.capture import capture_can
 from DoS.dos import dos_attack
+from Falsify.fals_attack import fals_attack
 import os
 
-f_dict = {"1": capture_can, "2": dos_attack}
+f_dict = {"1": capture_can, "2": dos_attack, "3": fals_attack}
 
 if __name__ == "__main__":
     print(" 1 - vcan0\n", "2 - can0\n")
