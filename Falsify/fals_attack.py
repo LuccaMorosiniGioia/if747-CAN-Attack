@@ -12,6 +12,7 @@ def fals_attack(can_type):
 
     ids = ["aaa", "bbb", "ddd", "ccc", "yyy"]
     init_time = time.time()
+    msgs = []
     while time.time() - init_time <= 60:
         try:
             rand_idx = rand.randint(0, len(ids) - 1)
@@ -32,10 +33,14 @@ def fals_attack(can_type):
             )
             time.sleep(rand.randint(10, 100) / 100)
             bus.send(msg, 0.01)
+            msgs.append(str(msg)+'\n')
         except can.CanOperationError:
             print("Except: CanOperationError")
         except:
             print("Unkown Error Sending Can Msg")
 
+    f = open("can_dump.txt", "a")
+    f.writelines(msgs)
+    f.close()
     print("Falsifying Attack Done")
     bus.shutdown()

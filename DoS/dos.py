@@ -23,6 +23,6 @@ def dos_attack(can_type):
         except:
             print("Unkown Error Sending Can Msg")
         else:
-            time.sleep(0.001)
+            print("DoS msg sent!")
     print("DoS Attack Done")
     bus.shutdown()

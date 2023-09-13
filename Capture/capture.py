@@ -14,7 +14,7 @@ def capture_can(can_type):
     msgs = []
     init_time = time.time()
 
-    while time.time() - init_time <= 600:
+    while time.time() - init_time <= 300:
         try:
             msg = bus.recv(timeout=10)
         except can.CanOperationError:
