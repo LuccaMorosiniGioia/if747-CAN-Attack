@@ -39,7 +39,7 @@ def fals_attack(can_type):
         except:
             print("Unkown Error Sending Can Msg")
 
-    f = open("can_dump.txt", "a")
+    f = open("fals_attack_msgs.txt", "a")
     f.writelines(msgs)
     f.close()
     print("Falsifying Attack Done")
